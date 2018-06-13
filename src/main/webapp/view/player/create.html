@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Create new Player</title>
 </head>
 <body>
-
+<h2>Create new Player</h2>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/create-player}" th:object="${player}" method="post">
+    <br>Player name:<br>
+    <input type="text" name="name" style="width: 600px">
+    <br>
+    <br>Player age:<br>
+    <input type="text" name="name" style="width: 600px">
+    <br>
+    <br>Player height:<br>
+    <input type="text" name="name" style="width: 600px">
+    <br>
+    <br>Player position:<br>
+    <input type="text" name="name" style="width: 600px">
+    <br>
+    <br>Player team:<br>
+    <input type="text" name="name" style="width: 600px">
+    <br>
+    <input type="submit" value="Create category">
+</form>
+<p>
+    <a href="/team-list">Back to team lists</a>
+</p>
 </body>
 </html>
+

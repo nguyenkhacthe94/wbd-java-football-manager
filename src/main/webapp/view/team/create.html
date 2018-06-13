@@ -10,7 +10,7 @@
     <p th:text="${message}"></p>
 </th:block>
 <form th:action="@{/create-team}" th:object="${team}" method="post">
-    <br>Category name:<br>
+    <br>Team name:<br>
     <input type="text" name="name" style="width: 1000px">
     <br>
     <input type="submit" value="Create category">
