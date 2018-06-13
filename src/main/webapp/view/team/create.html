@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create team</title>
+</head>
+<body>
+<h2>Create new Team</h2>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/create-team}" th:object="${team}" method="post">
+    <br>Category name:<br>
+    <input type="text" name="name" style="width: 1000px">
+    <br>
+    <input type="submit" value="Create category">
+</form>
+<p>
+    <a href="/team-list">Back to team lists</a>
+</p>
+</body>
+</html>
+

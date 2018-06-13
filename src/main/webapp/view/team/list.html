@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Team List</title>
+</head>
+<body>
+<a href="/create-team">Create a new Team</a>
+<h3>Team List</h3>
+<table border="1">
+    <tr>
+        <th>Team</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="team:${teams}">
+        <tr>
+            <td th:text="${team.name}"></td>
+            <td><a href="/edit-team/"></a>Edit</td>
+            <td><a href="/delete-team/"></a>Delete</td>
+        </tr>
+
+    </th:block>
+</table>
+</body>
+</html>
